@@ -17,28 +17,27 @@ data table[80][80] = { 0 };
 
 void main()
 {
-	printf("116132019188  ÔøË¼ÑÅ  ¼ÆËÄ\n");
-	printf("**************************\n");
+	
 	int m = 0;
-	printf("ÇëÊäÈë²âÊÔÀı¸öÊı£º");
+	printf("è¯·è¾“å…¥æµ‹è¯•ä¾‹ä¸ªæ•°ï¼š");
 	scanf("%d",&m);
 	getchar();
 	for (int r = 0; r < m; r++)
 	{
-		printf("µÚ%d¸ö²âÊÔÀıÈçÏÂ£º\n",r+1);
+		printf("ç¬¬%dä¸ªæµ‹è¯•ä¾‹å¦‚ä¸‹ï¼š\n",r+1);
 		int a[80] = { 0 }, b[80] = { 0 }, arr[80] = { 0 };
 		int L = 0, n = 0;
 
-		printf("ÇëÊäÈëÊıÁĞ³¤¶È£º");		//1 3 9 5 2 6
+		printf("è¯·è¾“å…¥æ•°åˆ—é•¿åº¦ï¼š");		//1 3 9 5 2 6
 		scanf("%d", &n);
-		printf("ÇëÊäÈëÒ»¸öÊıÁĞ£º");
+		printf("è¯·è¾“å…¥ä¸€ä¸ªæ•°åˆ—ï¼š");
 		for (int i = 0; i < n; i++)
 			scanf("%d", &a[i]);
 
 		for (int i = 0; i < n; i++)
-			b[i] = a[i];			//¸´ÖÆÊı×éa
+			b[i] = a[i];			//å¤åˆ¶æ•°ç»„a
 
-		//Ã°ÅİÅÅĞò
+		//å†’æ³¡æ’åº
 		int temp = 0;
 		for (int i = n - 1; i > 0; i--)
 		{
@@ -51,10 +50,10 @@ void main()
 					b[j + 1] = temp;
 				}
 			}
-		}							//µÃµ½bÊÇÕıĞò
+		}							//å¾—åˆ°bæ˜¯æ­£åº
 
-		//¶Ôtable±í½øĞĞ¸³Öµ
-		for (int s = 0; s < n; s++)				//µÚÒ»ĞĞ
+		//å¯¹tableè¡¨è¿›è¡Œèµ‹å€¼
+		for (int s = 0; s < n; s++)				//ç¬¬ä¸€è¡Œ
 		{
 			for (int t = 0; t < n; t++)
 			{
@@ -65,8 +64,8 @@ void main()
 			}
 		}
 
-		//ÖÁ´Ë£¬¸³Öµ³É¹¦
-/*		printf("±í¸ñÈçÏÂ£º\n");
+		//è‡³æ­¤ï¼Œèµ‹å€¼æˆåŠŸ
+/*		printf("è¡¨æ ¼å¦‚ä¸‹ï¼š\n");
 		for (int i = 0; i < n; i++)
 		{
 			for (int j = 0; j < n; j++)
@@ -74,22 +73,22 @@ void main()
 			printf("\n");
 		}*/
 
-		//´òÓ¡³¤¶È
+		//æ‰“å°é•¿åº¦
 		L = max(n + 1, n + 1);
-		printf("×î³¤µİÔö×ÓĞòÁĞ³¤¶ÈÎªL=%d\n", L);
+		printf("æœ€é•¿é€’å¢å­åºåˆ—é•¿åº¦ä¸ºL=%d\n", L);
 
-		//´òÓ¡Ã¿¸öp,q,ÖÁ´Ë±í¸ñÒÑ¾­´òºÃ
-/*		printf("´òÓ¡ºÛ¼££º\n");
+		//æ‰“å°æ¯ä¸ªp,q,è‡³æ­¤è¡¨æ ¼å·²ç»æ‰“å¥½
+/*		printf("æ‰“å°ç—•è¿¹ï¼š\n");
 		for (int i = 0; i < n; i++)
 		{
 			for (int j = 0; j < n; j++)
 				if (table[i][j].value != 0)
-					printf("table[%d][%d]=%d,ÉÏÒ»¸öÊÇtable[%d,%d]\n", i, j, table[i][j].value, table[i][j].p, table[i][j].q);
+					printf("table[%d][%d]=%d,ä¸Šä¸€ä¸ªæ˜¯table[%d,%d]\n", i, j, table[i][j].value, table[i][j].p, table[i][j].q);
 		}
 		printf("\n");*/
 
 		int u = 0, v = 0;
-//		printf("×îºóÒ»¸öÊıµÄÏÂ±ê£º(%d,%d)\n", e, f);
+//		printf("æœ€åä¸€ä¸ªæ•°çš„ä¸‹æ ‡ï¼š(%d,%d)\n", e, f);
 
 		for (int i = 1; i <= L; i++)
 		{
@@ -101,7 +100,7 @@ void main()
 			//		printf("(%d,%d)\n",e,f);
 		}
 
-		printf("×î³¤µİÔö×ÓĞòÁĞ£º");
+		printf("æœ€é•¿é€’å¢å­åºåˆ—ï¼š");
 		for (int i = 0; i < L; i++)
 			printf("%d  ", arr[i]);
 
@@ -112,7 +111,7 @@ void main()
 
 
 int max(int s, int t)
-{	//´«Èës,tµÄÖµ
+{	//ä¼ å…¥s,tçš„å€¼
 	int m = 0;
 	for (int i=0;i<=s-1;i++)
 	{
@@ -121,7 +120,7 @@ int max(int s, int t)
 			{
 				m = table[i][j].value;
 
-				//¿ÉÒÔ¼ÇÂ¼×îºóÒ»´Î¸üĞÂµÄi,j
+				//å¯ä»¥è®°å½•æœ€åä¸€æ¬¡æ›´æ–°çš„i,j
 				table[s][t].p = i;
 				table[s][t].q = j;
 
